@@ -1,0 +1,10 @@
+El archivo contenido, explica la arquitectura de 32 bits, para la ejecución de programas en asm.
+
+#Teoría de asm.
+//pendiente redacción
+
+#Comandos
+sudo apt-get install nasm                   | Instalación del compilador nasm para asm
+nasm -f elf Holamundo.asm                   | Pasar el archivo asm por el compilador de asm, que genera el .o para enviar al enlasador
+ld -m elf_i386 -s -o Holamundo  Holamundo.o | Modo de enlase para registros de 32 bits= elf_i386
+./Holamundo                                 | Ejecución del programa compilado
