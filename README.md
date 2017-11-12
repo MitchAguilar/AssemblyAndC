@@ -6,6 +6,27 @@
 En el momento de crear éstos programas en Assembly, fue necesario el uso de un SO de derivación GNU/linux, es éste caso ( Linux mint ), no con ello queriendo dictar un SO específico para correrlos; sin embargo los SO de derivación GNU/linux evitan el uso de una VM para e enlace con el compilador NASM, usado en la compilación de éstos programas, y que en Windows es necesaria.
 
 ## > 1.- Hola Mundo
+``` nasm
+section .data
+
+msg db "hola mundo!!!",0xA,0xD
+len equ $ - msg
+
+section .text
+    global _start
+_start:
+    
+    mov eax, 4 ; llamda al sistema(sys_ write)
+    ;eax= 4
+    mov ebx, 1 ;stout
+    mov ecx, msg ;msm _salid
+    mov edx, len ; longitud msg 
+
+    int 0x80 ; interruccion, llamada al sistema de interruciones
+    mov eax, 1 ;exit
+    int 0x80 ; interruccion invocada
+```
+
 ~~~
 El archivo contenido, explica la arquitectura de 32 bits, para la ejecución de programas en asm.
 
