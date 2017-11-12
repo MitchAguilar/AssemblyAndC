@@ -1,6 +1,6 @@
 section .data
 
-msg db "hola mundo!!!",0xA,xD
+msg db "hola mundo!!!",0xA,0xD
 len equ $ - msg
 
 section .text
@@ -10,7 +10,7 @@ _start:
     mov eax, 4 ; llamda al sistema(sys_ write)
     ;eax= 4
     mov ebx, 1 ;stout
-    mov esx, msg ;msm _salid
+    mov ecx, msg ;msm _salid
     mov edx, len ; longitud msg 
 
     int 0x80 ; interruccion, llamada al sistema de interruciones
