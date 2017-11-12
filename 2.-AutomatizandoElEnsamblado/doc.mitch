@@ -1,11 +1,11 @@
-Este documento contiene las rutas para omitir el proceso de terminal para enlasar y compilar un programa ams
+Este documento contiene las rutas para omitir el proceso de terminal para enlazar y compilar un programa ams
 
 #Teoría de asm.
-/ Radica en la uso de sublime text para mediante ctrl+b poder enlasar y compilar archivos asm
+/ Radica en el uso de sublime text para mediante ctrl+b poder enlazar y compilar archivos asm
 
 #Comandos
-{"cmd": ["~/run.sh ${file} ${file_base_name}"],"shell": true}	|Comando de ejecucion para sublime
+{"cmd": ["~/run.sh ${file} ${file_base_name}"],"shell": true}	|Comando de ejecución para sublime
 REF// run.sh 													|Comando bash para el proceso
 
-#Precaucion 
-/Eliminar los espacios de las rutas, interferen en la secuencia de la  bash
+#Precaución 
+/Eliminar los espacios de las rutas, interfieren en la secuencia de la  bash
