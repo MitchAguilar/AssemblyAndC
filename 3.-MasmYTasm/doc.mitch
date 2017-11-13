@@ -1,0 +1,11 @@
+Este documento contiene las aclaraciones a tener en cuenta respecto a los compiladores masm y tasm
+
+#Teoría de asm.
+/ Radica en el hecho de que son compiladores para el Ms Dos, son nativos de Microsoft en el caso del masm, y el tasm es compatible
+
+#Comandos
+REF// Tasm.asm	|Codigo para dicho compilador
+REF// Masm.asm	|Codigo para dicho compilador
+
+#Precaución 
+/A pesar de sus diferencias, en retrospectiva son basicamente iguales.

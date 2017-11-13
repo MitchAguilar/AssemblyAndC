@@ -58,6 +58,76 @@ REF// run.sh 													|Comando bash para el proceso
 ~~~
 ➡ [Enlace del doc.mitch](2.-AutomatizandoElEnsamblado/doc.mitch)
 
+## > 3.- Masm Y Tasm
+``` masm
+;masa
+.model small; definiendo el tipo de model, corto (64 kb)
+
+.data ; se definen las variables que se van a ocupar, es el segmento de los datos
+
+mensaje db 'hola, soy mitch$'; ya no necesitamos colocar la longitud del mensaje
+
+.code
+empieza:;definimos el comienzo del cuerpo del programa, el body
+
+mov ax,@data ;movemos el registro dx, los datos a auxiliar
+mov ds,ax
+	
+	;en ah siempre se cargan las funciones, en este caso 09h, permite desplegar un mensaje en pantalla
+mov ah,09h; 0x9 la misma instruccion
+mov dx,offset mensaje; movemos el resgistro dx al contenido del mensaje
+
+; se llama a la interrupcion 21h
+int 21h
+
+;terminamos el programa
+mov ax,4c00h
+int 21h
+
+.stack;segmento de pila
+
+end empieza;termina el segmento definido como empieza
+
+;--------------------Microsoft Assembly----------------------------
+```
+
+``` tasm
+;turbo asm o tasm
+
+.model small; declaramos el modelo de memoria (64kb)
+
+.stack
+
+.data
+mensaje dB 'Hola, soy mitch','$';mensaje, termina con caracter
+
+.code 
+inicio:;segmento del programa, el linker del enlazador
+mov ax, @data
+mov ds, ax
+lea dx, mensaje
+mov ah, 09h
+int 21h; misma nterrucion
+mov ah,4ch
+int 21h
+end inicio
+;--------------------Retrocompatibilidad con Microsoft Assembly----------------------------
+
+```
+~~~
+Este documento contiene las aclaraciones a tener en cuenta respecto a los compiladores masm y tasm
+
+#Teoría de asm.
+/ Radica en el hecho de que son compiladores para el Ms Dos, son nativos de Microsoft en el caso del masm, y el tasm es compatible
+
+#Comandos
+REF// Tasm.asm	|Codigo para dicho compilador
+REF// Masm.asm	|Codigo para dicho compilador
+
+#Precaución 
+/A pesar de sus diferencias, en retrospectiva son basicamente iguales.
+~~~
+➡ [Enlace del doc.mitch](3.-MasmYTasm/doc.mitch)
 
 > [LICENSE ® ](https://opensource.org/licenses/MIT) 
 !["License"](https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png)
