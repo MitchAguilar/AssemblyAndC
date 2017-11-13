@@ -59,7 +59,7 @@ REF// run.sh 													|Comando bash para el proceso
 ➡ [Enlace del doc.mitch](2.-AutomatizandoElEnsamblado/doc.mitch)
 
 ## > 3.- Masm Y Tasm
-``` masm
+``` nasm
 ;masa
 .model small; definiendo el tipo de model, corto (64 kb)
 
@@ -91,7 +91,7 @@ end empieza;termina el segmento definido como empieza
 ;--------------------Microsoft Assembly----------------------------
 ```
 
-``` tasm
+``` nasm
 ;turbo asm o tasm
 
 .model small; declaramos el modelo de memoria (64kb)
