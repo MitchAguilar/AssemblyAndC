@@ -1,9 +1,10 @@
-
-# Assembly
-
-## Bienvenido/a
+![Assembly](Data/1.jpg)
+# Bienvenido/a
 
 En el momento de crear éstos programas en Assembly, fue necesario el uso de un SO de derivación GNU/linux, es éste caso ( Linux mint ), no con ello queriendo dictar un SO específico para correrlos; sin embargo los SO de derivación GNU/linux evitan el uso de una VM para e enlace con el compilador NASM, usado en la compilación de éstos programas, y que en Windows es necesaria.
+
+## Ilustración
+![ils](Data/2.gif)
 
 ## > 1.- Hola Mundo
 ``` nasm
